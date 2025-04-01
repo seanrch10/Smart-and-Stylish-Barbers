@@ -72,7 +72,8 @@
   }
   
 .hero {
-  background-image: url('your-image.jpg');
+  .hero {
+  background-image: url('https://i.ibb.co/Hp36zghG/Smart-and-Stylish-Front-of-Shop.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
