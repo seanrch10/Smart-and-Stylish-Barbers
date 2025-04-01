@@ -403,10 +403,13 @@
   cursor: pointer;
 }
 
-/* Show hamburger on small screens */
 @media (max-width: 768px) {
+  /* Mobile nav setup */
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
   }
 
   nav ul {
@@ -430,52 +433,30 @@
   nav ul li {
     margin-bottom: 10px;
   }
+
+  /* Review slider on mobile */
+  .review-slider {
+    flex-direction: column;
+  }
+
+  .nav-button {
+    margin: 10px 0;
+  }
+
+  .review {
+    text-align: center;
+  }
+
+  /* Hero section adjustments */
+  .hero-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Work gallery stack */
+  .work-gallery {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-
- 
-  @media (max-width: 768px) {
-    .work-gallery {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    nav ul {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .review-slider {
-        flex-direction: column;
-      }
-    
-      .nav-button {
-        margin: 10px 0;
-      }
-    
-      .review {
-        text-align: center;
-      }
-    }
-    
-  }
-
-  @media (max-width: 768px) {
-    .hero-overlay {
-      padding-left: 20px;
-      padding-right: 20px;
-      justify-content: center;
-      text-align: center;
-    }
-  }
-  
-  
