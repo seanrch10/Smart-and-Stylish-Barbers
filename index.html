@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart and Stylish Barbers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://i.ibb.co/Zp6NYTcx/Smart-and-Stylish-Logo.jpg" alt="Smart and Stylish Logo">
+      </a>
+    </div>
+    <nav>
+      <ul class="center-nav">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Welcome to Smart and Stylish Barbers</h1>
+        <a href="prices.html" class="button">View our Prices</a>
+      </div>
+    </div>
+  </section>
+       
+
+  <section class="about-preview">
+    <div class="about-preview-video">
+      <iframe src="https://streamable.com/e/sahg3w"
+              frameborder="0"
+              width="100%"
+              height="315"
+              allowfullscreen
+              style="border: 2px solid red; border-radius: 10px;">
+      </iframe>
+    </div>
+  
+    <div class="about-preview-text">
+      <h2>Look Sharp, Feel Good</h2>
+      <p>
+        Located in the heart of Blanchardstown Village, Smart and Stylish Barbers delivers expert cuts with premium care.
+        Our skilled barbers blend classic and modern styles with precision — and it shows.
+        With a 4.9-star average from happy clients, you're in the right hands.
+      </p>
+      <a href="about.html" class="button">Learn More</a>
+    </div>
+  </section>
+  
+  <section class="reviews-section">
+    <h2>What Our Clients Say</h2>
+    <div class="section-divider"></div>
+  
+    <div class="review-slider">
+      <button id="prev-review" class="nav-button">‹</button>
+  
+      <div class="review-container">
+        <div class="review active">
+          <div class="stars">★★★★★</div>
+          <p>“Great experience at Smart and Stylish Barber. The barber was skilled, friendly, and gave me exactly the cut I wanted. Fast service and a clean, comfortable space. Highly recommend.”</p>
+          <span>- Mohammed</span>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Outstanding barbershop! Talented and stylish barbers offering sharp cuts at unbeatable low prices. Great value for excellent services!”</p>
+          <span>- Haroon</span>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Went in here for a haircut at lunch time. Excellent job by the crew here. Very good service and perfect haircut exactly as I requested.”</p>
+          <span>- Chris</span>
+        </div>
+      </div>
+  
+      <button id="next-review" class="nav-button">›</button>
+    </div>
+  </section>
+   
+ 
+ <script>
+    const reviews = document.querySelectorAll('.review');
+    const prevBtn = document.getElementById('prev-review');
+    const nextBtn = document.getElementById('next-review');
+    let current = 0;
+    let autoSlide;
+  
+    function showReview(index) {
+      reviews[current].classList.remove('active');
+      current = (index + reviews.length) % reviews.length;
+      reviews[current].classList.add('active');
+    }
+  
+    function showNext() {
+      showReview(current + 1);
+    }
+  
+    function showPrev() {
+      showReview(current - 1);
+    }
+  
+    function startAutoSlide() {
+      autoSlide = setInterval(showNext, 5000);
+    }
+  
+    function stopAutoSlide() {
+      clearInterval(autoSlide);
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      showNext();
+      startAutoSlide();
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      showPrev();
+      startAutoSlide();
+    });
+  
+    startAutoSlide();
+
+  </script> 
+  
+  <script>
+    const header = document.querySelector('.main-header');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
+
+<div class="bottom-spacer"></div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Smart and Stylish Barbers. All rights reserved.</p>
+</footer>
+   
+</body>
+</html>

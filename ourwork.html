@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work - Smart and Stylish Barbers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://i.ibb.co/Zp6NYTcx/Smart-and-Stylish-Logo.jpg" alt="Smart and Stylish Logo">
+      </a>
+    </div>
+    <nav>
+      <ul class="center-nav">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="our-work">
+    <h2>Our Work</h2>
+    <div class="work-gallery">
+      <img src="https://i.ibb.co/Fkp84ZYW/IMG-20221115-142901.jpg" alt="Cut 1">
+      <img src="https://i.ibb.co/DPX5fk21/2022-10-11-2.jpg" alt="Cut 2">
+      <img src="https://i.ibb.co/0yFvS4qD/IMG-20220928-174849-1.jpg" alt="Cut 3">
+      <img src="https://i.ibb.co/8LKXmWq1/IMG-20220928-123727-773.jpg" alt="Cut 4">
+    </div>
+  </section>
+
+  <script>
+    const header = document.querySelector('.main-header');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
+
+  <div class="bottom-spacer"></div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Smart and Stylish Barbers. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

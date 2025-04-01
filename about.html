@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Smart and Stylish Barbers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://i.ibb.co/Zp6NYTcx/Smart-and-Stylish-Logo.jpg" alt="Smart and Stylish Logo">
+      </a>
+    </div>
+    <nav>
+      <ul class="center-nav">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h1>About Us</h1>
+    <p>
+      Located in the heart of Blanchardstown Village, Dublin, Smart and Stylish Barbers is a premium grooming destination for those who value precision, professionalism, and personal style. Our barbers are highly trained professionals with years of experience in traditional and modern cutting techniques. Whether you're after a classic gentleman’s cut, a fresh fade, or expert beard sculpting, we deliver with unmatched attention to detail and care. <br><br>
+      We take pride in providing a relaxed and welcoming environment where clients of all ages feel confident and refreshed. Our tools are top-tier, our standards are high, and our passion for barbering is what drives us. At Smart and Stylish Barbers, it’s more than just a haircut — it’s a grooming experience.
+    </p>
+  </section>
+
+  <script>
+    const header = document.querySelector('.main-header');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
+
+  <div class="bottom-spacer"></div>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Smart and Stylish Barbers. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
