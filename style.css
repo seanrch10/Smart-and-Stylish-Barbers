@@ -70,33 +70,30 @@
   nav a:hover {
     color: red;
   }
-  
-  .hero {
+
+.hero {
   background-image: url('https://i.ibb.co/Hp36zghG/Smart-and-Stylish-Front-of-Shop.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
+  width: 100%;
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  position: relative;
   z-index: 1;
-}  
+}
 
 .hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* 20% dim */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* dimming strength */
   z-index: 0;
 }
-
 
   .hero-overlay {
     background-color: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
