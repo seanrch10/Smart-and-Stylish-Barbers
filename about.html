@@ -27,29 +27,38 @@
   <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 </header>
 
+<section class="about-section">
+  <h1>About Us</h1>
+  <p>
+    Located in the heart of Blanchardstown Village, Dublin, Smart and Stylish Barbers is a premium grooming destination for those who value precision, professionalism, and personal style. Our barbers are highly trained professionals with years of experience in traditional and modern cutting techniques. Whether you're after a classic gentleman’s cut, a fresh fade, or expert beard sculpting, we deliver with unmatched attention to detail and care. <br><br>
+    We take pride in providing a relaxed and welcoming environment where clients of all ages feel confident and refreshed. Our tools are top-tier, our standards are high, and our passion for barbering is what drives us. At Smart and Stylish Barbers, it’s more than just a haircut — it’s a grooming experience.
+  </p>
+</section>
 
-  <section class="about-section">
-    <h1>About Us</h1>
-    <p>
-      Located in the heart of Blanchardstown Village, Dublin, Smart and Stylish Barbers is a premium grooming destination for those who value precision, professionalism, and personal style. Our barbers are highly trained professionals with years of experience in traditional and modern cutting techniques. Whether you're after a classic gentleman’s cut, a fresh fade, or expert beard sculpting, we deliver with unmatched attention to detail and care. <br><br>
-      We take pride in providing a relaxed and welcoming environment where clients of all ages feel confident and refreshed. Our tools are top-tier, our standards are high, and our passion for barbering is what drives us. At Smart and Stylish Barbers, it’s more than just a haircut — it’s a grooming experience.
-    </p>
-  </section>
+<script>
+  const header = document.querySelector('.main-header');
 
-  <script>
-    const header = document.querySelector('.main-header');
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
     });
-  </script>
-  
+  }
+</script>
 
-  <div class="bottom-spacer"></div>
+<div class="bottom-spacer"></div>
 
 <footer class="site-footer">
   <p>&copy; 2025 Smart and Stylish Barbers. All rights reserved.</p>
