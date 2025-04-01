@@ -87,80 +87,73 @@
     </div>
   </section>
    
- 
  <script>
-    const reviews = document.querySelectorAll('.review');
-    const prevBtn = document.getElementById('prev-review');
-    const nextBtn = document.getElementById('next-review');
-    let current = 0;
-    let autoSlide;
-  
-    function showReview(index) {
-      reviews[current].classList.remove('active');
-      current = (index + reviews.length) % reviews.length;
-      reviews[current].classList.add('active');
-    }
-  
-    function showNext() {
-      showReview(current + 1);
-    }
-  
-    function showPrev() {
-      showReview(current - 1);
-    }
-  
-    function startAutoSlide() {
-      autoSlide = setInterval(showNext, 5000);
-    }
-  
-    function stopAutoSlide() {
-      clearInterval(autoSlide);
-    }
-  
+  // Review Slider Functionality
+  const reviews = document.querySelectorAll('.review');
+  const prevBtn = document.getElementById('prev-review');
+  const nextBtn = document.getElementById('next-review');
+  let current = 0;
+  let autoSlide;
+
+  function showReview(index) {
+    reviews[current].classList.remove('active');
+    current = (index + reviews.length) % reviews.length;
+    reviews[current].classList.add('active');
+  }
+
+  function showNext() {
+    showReview(current + 1);
+  }
+
+  function showPrev() {
+    showReview(current - 1);
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(showNext, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  if (nextBtn && prevBtn) {
     nextBtn.addEventListener('click', () => {
       stopAutoSlide();
       showNext();
       startAutoSlide();
     });
-  
+
     prevBtn.addEventListener('click', () => {
       stopAutoSlide();
       showPrev();
       startAutoSlide();
     });
-  
+
     startAutoSlide();
+  }
+</script>
 
-  </script> 
-  
-  <script>
-    const header = document.querySelector('.main-header');
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
-
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+<script>
+  // Navbar Scroll Behavior
+  const header = document.querySelector('.main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   });
 </script>
 
-  
+<script>
+  // Mobile Hamburger Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
-<div class="bottom-spacer"></div>
-
-<footer class="site-footer">
-  <p>&copy; 2025 Smart and Stylish Barbers. All rights reserved.</p>
-</footer>
-   
-</body>
-</html>
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+</script>
