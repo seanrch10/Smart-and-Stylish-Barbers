@@ -9,13 +9,14 @@
 </head>
 <body>
   <header class="main-header">
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <div class="logo">
       <a href="index.html">
         <img src="https://i.ibb.co/Zp6NYTcx/Smart-and-Stylish-Logo.jpg" alt="Smart and Stylish Logo">
       </a>
     </div>
     <nav>
-      <ul class="center-nav">
+      <ul class="center-nav" id="nav-links">
         <li><a href="about.html">About Us</a></li>
         <li><a href="prices.html">Prices</a></li>
         <li><a href="ourwork.html">Our Work</a></li>
@@ -137,6 +138,18 @@
       }
     });
   </script>
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+</script>
+
   
 
 <div class="bottom-spacer"></div>
